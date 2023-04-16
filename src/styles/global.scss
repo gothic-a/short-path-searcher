@@ -1,0 +1,39 @@
+@import './vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    background-color: $mainColor;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: $mainColor;
+    }
+    
+    &::-webkit-scrollbar-track {
+        // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        // background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: $mainColor;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(white, .2);
+        border-radius: 8px;
+        
+        &:hover {
+            background-color: rgba(white, .4);
+        }
+    }
+}
+
+
+
+* {
+    color: #fff;
+    font-family: Quicksand;
+}

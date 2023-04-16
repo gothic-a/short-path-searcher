@@ -1,0 +1,66 @@
+@import '../../styles/vars.scss';
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: max-content;
+    min-width: 100%;
+    font-weight: 600;
+    padding: 40px 16px 16px 16px;
+  
+    &__row {
+        display: flex;
+        justify-content: center;
+
+        &-node {
+            position: relative;
+            min-width: 100px;
+            max-width: 160px;
+            width: 100%;
+            cursor: pointer;
+            user-select: none;
+            box-sizing: border-box;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(white, .1);
+            border: 2px solid rgba(#fff, .8);
+            border-radius: 6px;
+            margin: 2px;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+            
+            .tip {
+                position: absolute;
+                left: 8px;
+                top: 8px;
+                display: flex;
+                text-transform: uppercase;
+                color: $blue;
+                font-weight: 600;
+            }
+        
+            &.blocked {
+                opacity: .25;
+            }
+            
+            &.marked {
+                background-color: rgba($blue, .1);
+                border: 2px solid rgba($blue, 1);
+                font-weight: 600;
+
+                span {
+                    color: $blue
+                }
+            }
+        }
+    }
+}
